@@ -147,6 +147,7 @@
                                     <field name='lot'
                                         groups='goods.batch_groups'
                                         attrs="{'readonly': ['|', ('using_batch', '=', False), ('state', '=', 'done')], 'required': [('using_batch', '=', True)]}" />
+					  <field name='location_id' groups="warehouse.multi_location_groups" options="{'no_open': True, 'no_create': True}"/>
                                     <field name='goods_uos_qty'
                                         groups='goods.auxiliary_unit_groups' sum='1'
                                         attrs="{'readonly': [('state', '=', 'done')]}"/>
@@ -185,6 +186,7 @@
                                             domain="[('goods_id', '=', goods_id), ('state', '=', 'done'), ('lot', '!=', False), ('qty_remaining', '>', 0), ('warehouse_dest_id', '=', parent.warehouse_id)]"
                                             context="{'lot': True}"
                                             options="{'no_open': True, 'no_create': True}" />
+					 <field name='location_id' groups="warehouse.multi_location_groups" options="{'no_open': True, 'no_create': True}"/>
                                         <field name='goods_uos_qty' sum='1'
                                             groups='goods.auxiliary_unit_groups'
                                             attrs="{'readonly': [('state', '=', 'done')]}"/>
@@ -342,6 +344,7 @@
                                     <field name='lot'
                                         groups='goods.batch_groups'
                                         attrs="{'readonly': ['|', ('using_batch', '=', False), ('state', '=', 'done')], 'required': [('using_batch', '=', True)]}"/>
+					<field name='location_id' groups="warehouse.multi_location_groups" options="{'no_open': True, 'no_create': True}"/>
                                     <field name='goods_uos_qty'
                                         groups='goods.auxiliary_unit_groups'
                                         sum='1'
@@ -389,6 +392,7 @@
                                         domain="[('goods_id', '=', goods_id), ('state', '=', 'done'), ('lot', '!=', False), ('qty_remaining', '>', 0), ('warehouse_dest_id', '=', parent.warehouse_id)]"
                                         context="{'lot': True}"
                                         options="{'no_open': True, 'no_create': True}"/>
+				<field name='location_id' groups="warehouse.multi_location_groups" options="{'no_open': True, 'no_create': True}"/>
                                     <field name='goods_uos_qty'
                                         sum='1'
                                         groups='goods.auxiliary_unit_groups'
@@ -536,6 +540,7 @@
                                         domain="[('goods_id', '=', goods_id), ('state', '=', 'done'), ('lot', '!=', False), ('qty_remaining', '>', 0), ('warehouse_dest_id', '=', parent.warehouse_id)]"
                                         context="{'lot': True}"
                                         options="{'no_open': True, 'no_create': True}" />
+					<field name='location_id' groups="warehouse.multi_location_groups" options="{'no_open': True, 'no_create': True}"/>
                                     <field name='goods_uos_qty'
                                         sum='1'
                                         attrs="{'readonly': [('state', '=', 'done')]}"
@@ -580,6 +585,7 @@
                                         <field name='lot'
                                             groups='goods.batch_groups'
                                             attrs="{'readonly': ['|', ('using_batch', '=', False), ('state', '=', 'done')], 'required': [('using_batch', '=', True)]}" />
+					  <field name='location_id' groups="warehouse.multi_location_groups" options="{'no_open': True, 'no_create': True}"/>
                                         <field name='goods_uos_qty'
                                             groups='goods.auxiliary_unit_groups'
                                             sum='1'
